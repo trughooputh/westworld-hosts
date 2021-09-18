@@ -1,22 +1,21 @@
-import { Head } from './head.js';
-import { Arm } from './arm.js';
-import { getRandomPercent } from './../utils.js';
+import { Head } from "./head.js";
+import { Arm } from "./arm.js";
 
 class Body {
   constructor() {
     this.head = new Head();
-    this.arms = [new Arm('L'), new Arm('R') ];
+    this.arms = [new Arm("L"), new Arm("R")];
     this.head = new Head();
     this.power = 100;
     this.health = 70;
     this.hungry = 50;
     this.thirsty = 50;
-  };
+  }
   updatePower(gradient = 1) {
     if (this.power <= 100) {
-      this.power = this.power + gradient > 100 ? 100 : this.power + gradient ;
+      this.power = this.power + gradient > 100 ? 100 : this.power + gradient;
     }
-  };
+  }
   updateHealth(gradient = 1) {
     if (this.health <= 100) {
       this.health = this.health + gradient > 100 ? 100 : this.health + gradient;

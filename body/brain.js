@@ -1,45 +1,45 @@
-import { getRandomPercent } from './../utils.js';
-
+import { getRandomPercent } from "trugh-utils";
 class Brain {
-  constructor(){
+  constructor() {
     this.personality = {
-      // humour: { 
+      // humour: {
       //   value: getRandomPercent(),
       //   gradient: 2,
       // },
-      sensibility: { 
+      sensibility: {
         value: getRandomPercent(),
         gradient: 1,
       },
-      happiness: { 
+      happiness: {
         value: getRandomPercent(),
         gradient: 2,
       },
-      // shyness: { 
+      // shyness: {
       //   value: getRandomPercent(),
       //   gradient: 0.1,
       // },
-      social: { 
+      social: {
         value: getRandomPercent(),
         gradient: 1,
       },
-      culture: { 
+      culture: {
         value: getRandomPercent(),
         gradient: 1,
       },
-      // curiousity: { 
+      // curiousity: {
       //   value: getRandomPercent(),
       //   gradient: 0.5,
       // },
-      // empathy: { 
+      // empathy: {
       //   value: getRandomPercent(),
       //   gradient: 1,
       // },
     };
-  };
+  }
   updateHappiness(gradient = 1) {
     if (this.happiness <= 100) {
-      this.happiness = this.happiness + gradient > 100 ? 100 : this.happiness + gradient;
+      this.happiness =
+        this.happiness + gradient > 100 ? 100 : this.happiness + gradient;
     }
   }
   updateSocial(gradient = 1) {
@@ -49,9 +49,10 @@ class Brain {
   }
   updateCulture(gradient = 1) {
     if (this.culture <= 100) {
-      this.culture = this.culture + gradient > 100 ? 100 : this.culture + gradient;
+      this.culture =
+        this.culture + gradient > 100 ? 100 : this.culture + gradient;
     }
   }
-};
+}
 
 export { Brain };
